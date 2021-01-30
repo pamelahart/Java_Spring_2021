@@ -1,8 +1,9 @@
+let ellipse1 = prompt("enter a basic color name in lower case", "green");
+let ellipse2 = prompt("enter another basic color name in lower case", "red");
 
 function setup () {
   createCanvas(820, 820);
   background(255, 204, 0);
-  loadImage("newhead.png");
 }
 
 function draw () {
@@ -31,10 +32,10 @@ function draw () {
   
   //middle
   strokeWeight(6);
-  ellipse(450, 300, 220, 220);
+  ellipse (ellipse1);(450, 300, 220, 220);
   //bottom
   strokeWeight(8);
-  ellipse(450, 550, 350, 350);
+  ellipse (ellipse2);(450, 550, 350, 350);
   
   
   //horizon
