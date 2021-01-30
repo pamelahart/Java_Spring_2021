@@ -6,9 +6,11 @@ function setup () {
 
 function draw () 
 { 
+ 
+
   // background
   background(51, 192, 255);
-  
+
   // Snowman
  fill("#f1f1f1");
   //arms
@@ -40,7 +42,10 @@ function draw ()
   //horizon
   line(0, 725, 920, 725);
   strokeWeight(4);
- 
+
+  // stripe
+  rect(30, 20, 500, 55);
+  fill("red");
 
  
 
