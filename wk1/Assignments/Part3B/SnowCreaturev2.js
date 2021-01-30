@@ -1,17 +1,16 @@
-let ellipse1 = prompt("enter a basic color name in lower case", "green");
-let ellipse2 = prompt("enter another basic color name in lower case", "red");
 
 function setup () {
   createCanvas(820, 820);
-  background(255, 204, 0);
+  background("#ccc");
 }
 
-function draw () {
+function draw () 
+{ 
+  // background
   background(51, 192, 255);
   
-  
   // Snowman
- 
+ fill("#f1f1f1");
   //arms
   strokeWeight(16);
   line(400, 300, 200, 200); 
@@ -32,19 +31,18 @@ function draw () {
   
   //middle
   strokeWeight(6);
-  ellipse (ellipse1);(450, 300, 220, 220);
+  ellipse(450, 300, 220, 220);
   //bottom
   strokeWeight(8);
-  ellipse (ellipse2);(450, 550, 350, 350);
+  ellipse(450, 550, 350, 350);
   
   
   //horizon
-  line(0, 720, 920, 720);
+  line(0, 725, 920, 725);
   strokeWeight(4);
  
 
-  // background
-
+ 
 
 }
 
