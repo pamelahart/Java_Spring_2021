@@ -8,23 +8,26 @@ function setup () {
 function draw () 
 { 
  
-
   // background
   background(51, 192, 255);
-
-  // stripe
-  fill("purple")
-  stroke("purple")
-  rect(0, 300, 820, 250);
-
 
   
   // Snowman
 
+   // Hat
+  line(600, 90, 300, 90); 
+   rect(415, 20, 70, 60);
+
   //arms
   strokeWeight(16);
   line(400, 300, 200, 200); 
+  strokeWeight(16);
   line(700, 200, 500, 300); 
+
+  // stripe
+  fill("purple");
+  stroke("purple");
+  rect(0, 300, 820, 250);
  
   //head
   fill(color);
@@ -49,15 +52,15 @@ function draw ()
   strokeWeight(6);
   ellipse(450, 300, 220, 220);
 
+  fill("gray")
   //bottom circle
   strokeWeight(8);
   ellipse(450, 550, 350, 350);
   
-  
   //horizon
   line(0, 725, 920, 725);
-  strokeWeight(4);
-  stroke
+  strokeWeight(18);
+
 
   
 
