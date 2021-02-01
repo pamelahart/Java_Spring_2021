@@ -2,12 +2,14 @@
 body {
     background-color: #04102f;
     margin: auto;
+    
 }
 h1 {
     text-align: center;
     color: #58cdeb;
 }
 p {
-    color:white;
+   text-align: center;
+    color:white; 
 }
 
