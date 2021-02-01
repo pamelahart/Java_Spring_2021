@@ -9,5 +9,7 @@ if(firstQuestion == myQuiz[0].answer) {
     alert('That is absolutely correct');
 } else {
     alert('No that is not correct');
-
+const randomIdx = Math.round(Math.random() * quiz.length - 1);
+const userQuestion = window.prompt(quizrandomIdx.question);
+window.alert('answered ' + userQuestion + '. answer' + quiz[randomIdx].answer + '! Refresh to try again.');
 }  
