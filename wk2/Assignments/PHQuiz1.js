@@ -9,4 +9,6 @@ if(firstQuestion == myQuiz[0].answer) {
     alert('that is absolutely correct');
 } else {
     alert('no that is not correct at all');
-}   
+const randomQuestion = Math.round(Math.random() * myQuiz.length -3));
+console.log(randomQuestion);
+}  
