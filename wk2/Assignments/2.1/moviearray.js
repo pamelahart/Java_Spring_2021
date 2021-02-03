@@ -1,16 +1,20 @@
-const myQuiz = [
- {question: 'what is your favorite cookie', answer: 'chocolate chip'},
- {question: 'what is the best burger', answer: 'juicy lucy'},
- {question: 'what is the best chinese menu item', answer: 'fried rice'},
- {question: 'what is your favorite cake', answer: 'carrot'},
+let myArr = 
+['Star Wars', 'The Italian Job', 'Iron Man', 'The Avengers', 
+ 'Raiders of the Lost Ark'];
+const myMovies = [
+    { question: 'what is your favorite movie', answer: 'Star Wars' },
 ];
-const firstQuestion = prompt(myQuiz[0].question);
-if(firstQuestion == myQuiz[0].answer) {
-    alert('That is absolutely correct');
-} else {
-    alert('No that is not correct');
-} if (firstQuestion == myQuiz[0].answer) {
-}  
-const randomIdx = Math.round(Math.random() * myQuiz.length - 1);
-const userResponse = window.prompt(myQuiz[randomIdx].question);
-console.log
+let myOtherMovieArray = new Array();
+myOtherMovieArray.push('star wars'),
+console.log(myArr);
+console.log(myOtherMovieArray);
+
+//const firstQuestion = prompt(myArr[0].question);
+//if(firstQuestion == myArr[0].answer) {
+ //   alert('That is absolutely correct');
+//} else {
+  //  alert('No that is not correct');
+ //if(firstQuestion == myMovies[0].answer) {
+ 
+//const randomIdx = Math.round(Math.random() * myMovies.length - 1);
+//const userResponse = window.prompt(myMovies[randomIdx].question);
