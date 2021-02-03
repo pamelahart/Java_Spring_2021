@@ -1,13 +1,15 @@
-let myArr = 
+const myArr = 
 ['Star Wars', 'The Italian Job', 'Iron Man', 'The Avengers', 
  'Raiders of the Lost Ark'];
-const myMovies = [
-    { question: 'what is your favorite movie', answer: 'Star Wars' },
-];
-let myOtherMovieArray = new Array();
-myOtherMovieArray.push('star wars'),
+
+const myOtherMovieArray = new Array();
+myOtherMovieArray.push('Tomb Raider'),
 console.log(myArr);
 console.log(myOtherMovieArray);
+
+//const myMovies = [
+//    { question: 'what is your favorite movie', answer: 'Star Wars' },
+//];
 
 //const firstQuestion = prompt(myArr[0].question);
 //if(firstQuestion == myArr[0].answer) {
