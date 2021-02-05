@@ -5,7 +5,7 @@ function createTile() {
   translate(0,0);
   fill('blue');
   rect(0, 0, 200, 200);
-  stroke(white);
+  stroke('white');
   strokeWeight(3);
   line(0, 0, 200, 200);
   line(200, 0, 0, 200);
@@ -51,7 +51,7 @@ function draw() {
 //https://gist.github.com/ken-teaches-web/2618d352c71a9019b070d0f272790afb (Links to an external site.)
 
 //Using google fonts for rendering text()
-https://github.com/processing/p5.js/wiki/Drawing-Text-Using-Web-Fonts
+//https://github.com/processing/p5.js/wiki/Drawing-Text-Using-Web-Fonts
 
 
 

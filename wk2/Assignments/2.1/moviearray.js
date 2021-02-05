@@ -1,10 +1,10 @@
 const myMovieArr = ['Star Wars', 'The Italian Job', 'Iron Man', 'The Avengers', 'Raiders of the Lost Ark'];
 const myMovieQuiz = window.prompt('What is your favorite movie');
-myMovieArray.push('myMovieQuiz'); // add item to end
+myMovieArr.push(myMovieQuiz); // add item to end
 
 console.log(myMovieArr);
 console.log(myMovieQuiz);
-console.log(myMovieArray.toString());
+console.log(myMovieArr.toString());
 
 
 //Step:
