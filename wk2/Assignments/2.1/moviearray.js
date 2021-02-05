@@ -1,11 +1,10 @@
-const myMovieArr = 
-['Star Wars', 'The Italian Job', 'Iron Man', 'The Avengers', 
- 'Raiders of the Lost Ark'];
+const myMovieArr = ['Star Wars', 'The Italian Job', 'Iron Man', 'The Avengers', 'Raiders of the Lost Ark'];
 const myMovieQuiz = window.prompt('What is your favorite movie');
-myMovieArray.push('Tomb Raider'); // add item to end
+myMovieArray.push('myMovieQuiz'); // add item to end
 
 console.log(myMovieArr);
-console.log(myMovieArray);
+console.log(myMovieQuiz);
+console.log(myMovieArray.toString());
 
 
 //Step:
@@ -18,20 +17,6 @@ console.log(myMovieArray);
 //myArr.pop(); //removes last item
 //myArr.shift(); //removes first item
 //myArr.unshift(); //adds to the beginning of item
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //const firstQuestion = prompt(myArr[0].question);
