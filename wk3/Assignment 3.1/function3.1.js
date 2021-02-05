@@ -3,18 +3,61 @@ function setup() {
 }
 function createTile() {
   translate(0,0);
-  fill('blue');
+  fill('#1b618c');
   rect(0, 0, 200, 200);
+  noStroke();
+
+ 
+  
+ 
+  
   stroke('white');
   strokeWeight(3);
+
   line(0, 0, 200, 200);
-  line(200, 0, 0, 200);
-  noStroke();
-  fill('yellow');
-  circle(100, 50, 50)
-  circle(50, 100, 50)
-  circle(150, 100, 50)
-  circle(50, 100, 50)
+  strokeWeight(3);
+  line(20, 0, 200, 200);
+  strokeWeight(2.5);
+  line(30, 0, 200, 200);
+  strokeWeight(2);
+  line(40, 0, 200, 200);
+  strokeWeight(1);
+  line(50, 0, 200, 200);
+
+  line(0, 30, 200, 200);
+  strokeWeight(2.5);
+  line(0, 20, 200, 200);
+  strokeWeight(2.5);
+  line(0, 70, 00, 200);
+  strokeWeight(2.5);
+  line(0, 60, 200, 200);
+  strokeWeight(2);
+  line(0, 50, 200, 200);
+  strokeWeight(1);
+  line(0, 40, 200, 200);
+  
+ 
+  line(120, 0, 200, 200);
+  strokeWeight(2.5);
+  line(130, 0, 200, 200);
+  strokeWeight(2);
+  line(140, 0, 200, 200);
+  strokeWeight(1);
+  line(150, 0, 200, 200);
+
+  line(0, 130, 200, 200);
+  strokeWeight(2.5);
+  line(0, 140, 200, 200);
+  strokeWeight(2);
+  line(0, 150, 200, 200);
+  strokeWeight(1);
+  line(0, 160, 200, 200);
+
+  fill('#f3ae0b');
+  circle(105, 100, 140)
+  fill('#fad57e');
+  circle(105, 100, 100)
+  
 }
 
 function draw() {
