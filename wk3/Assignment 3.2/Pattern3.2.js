@@ -1,7 +1,7 @@
 function setup() {
   createCanvas(600, 600);
 }
-function createTile(originX, originY, primaryColor) {
+function createTile(originX, originY, primaryColor, secondaryColor) {
   translate(originX, originY);
   fill(primaryColor);
   rect(0, 0, 200, 200);
@@ -65,6 +65,9 @@ function draw() {
   createTile(0, 0, '#252d54');
   createTile(0, 200, '#1b618c');
   createTile(0, 200, '#252d54');
+  fill('white');
+  circle(105, 100, 0);
+
   //Row 2
   createTile(200, -400, '#1b618c');
   createTile(0, 200, '#252d54');
