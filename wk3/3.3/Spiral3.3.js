@@ -7,28 +7,43 @@ function setup() {
 function makeArm(rotateBy) {
   let alt = Math.round(rotateBy / 360);
   noFill();
-  stroke(255);
+  stroke(255, 0, 0);
   strokeWeight(1);
-  //ellipse(150, 150 + alt, 150 / alt);
   bezier(alt - 10, alt + 10, 10, 10, 10, 90, 50, 80);
+}
 
-  //function makeArm2(rotateBy) {
-  //  let alt = Math.round(rotateBy / 360);
-   // noFill('red');
-  //  stroke(255);
-    //strokeWeight(2);
-   // ellipse(150, 150 + alt, 150 / alt);
+  function makeArm2(rotateBy) {
+    let alt = Math.round(rotateBy / 300);
+    stroke(0, 0, 255);
+    strokeWeight(2);
+    ellipse(150, 150, 150 / alt);
+
 }
 function draw() {
   translate(300, 300);
-  rotate(rotateBy) // come back to This
+  rotate(rotateBy)
   makeArm(rotateBy);
   rotateBy += 5;
 }
 function mousePressed() {
     noLoop();
-}
+   let s = second()
+   if (s = 5){ 
 
+   }
+   else {
+    makeArm2
+   }
+  }
+    
+  
+  
+  //red stops
+
+//function mouseReleased(fxn){
+// makeArm2(rotateBy + 5) //starts blue
+
+//}
 
 //Exercise 3.3 
 //You may have played with a ‘Spirograph’ as child—a mechanical device that allow you to create repetitive patterns with slight variations that created beautiful and interesting art.Alternatively, you may have cut snowflakes out of folded paper that allowed you to make a design with cuts that would magically transform in to a beautiful radial pattern.This assignment is to do the same.
