@@ -1,106 +1,34 @@
 function setup() {
   createCanvas(600, 600);
+  background(0);
+  angleMode(DEGREES);
 }
-function createTile(originX, originY, primaryColor, secondaryColor) {
-  translate(originX, originY);
-  fill(primaryColor);
-  rect(0, 0, 200, 200);
-  noStroke();
-  
-   //All Tile Lines- New Spiral
-  stroke('white');
-  strokeWeight(3);
 
-  //MAIN Middle Set
-  line(0, 0, 200, 200);
-  strokeWeight(3);
-  line(20, 0, 200, 200);
-  strokeWeight(2.5);
-  line(30, 0, 200, 200);
-  strokeWeight(2);
-  line(40, 0, 200, 200);
-  strokeWeight(1);
-  line(50, 0, 200, 200);
-
-  //Far left side
-  line(0, 30, 200, 200);
-  strokeWeight(2.5);
-  line(0, 20, 200, 200);
-  strokeWeight(2.5);
-  line(0, 70, 0, 200);
-  strokeWeight(2.5);
-  line(0, 60, 200, 200);
-  strokeWeight(2);
-  line(0, 50, 200, 200);
-  strokeWeight(1);
-  line(0, 40, 200, 200);
-  
- //Far Right Side
-  line(120, 0, 200, 200);
-  strokeWeight(2.5);
-  line(130, 0, 200, 200);
-  strokeWeight(2);
-  line(140, 0, 200, 200);
-  strokeWeight(1);
-  line(150, 0, 200, 200);
-
-  //Far Bottom Left Side
-  line(0, 130, 200, 200);
-  strokeWeight(2.5);
-  line(0, 140, 200, 200);
-  strokeWeight(2);
-  line(0, 150, 200, 200);
-  strokeWeight(1);
-  line(0, 160, 200, 200);
-
-  //Circles
-  fill('#f3ae0b');
-  circle(105, 100, 140);
-  fill('#fad57e');
-  circle(105, 100, 100);
-
-}
 function draw() {
-  //Row 1
-  createTile(0, 0, '#252d54');
-  createTile(0, 200, '#1b618c');
-  createTile(0, 200, '#252d54');
-  fill('white');
-  circle(105, 100, 0);
-
-  //Row 2
-  createTile(200, -400, '#1b618c');
-  createTile(0, 200, '#252d54');
-  createTile(0, 200, '#1b618c');
-  //Row 3
-  createTile(200, -400, '#252d54');
-  createTile(0, 200, '#1b618c');
-  createTile(0, 200, '#252d54');
+  translate(300, 300);
+  rotate(5) // come back to This
+  noFill();
+  stroke(255);
+  strokeWeight(1);
+  ellipse(150, 150, 150);
+  
 }
 
 
-//Exercise 3.2 
-//Steps:
-//Set up your exercise with a link to p5.js(the video used the cdn link(Links to an external site.)) and a link to your script file.
-//Create your canvas to accommodate a grid of tiles.As an example, to create a canvas large enough for a 3 x3 grid(with the tile being 200 x 200) I made the canvas 600 x 600.
-//Paste your function into you script.
-//Convert the translate function to accept parameters
-//Find attributes that you can convert to parameters(I used color, but you could use scale, angle, etc.).
-//In your draw function call your function using your parameters.
-//Fill the grid with variations of your tile.
-//Things to consider:
-//In the video, I used createTile a whole bunch of times in my draw function.Is there a way I could have used a loop to reduce the repetition ?
+//Exercise 3.3 
+//You may have played with a ‘Spirograph’ as child—a mechanical device that allow you to create repetitive patterns with slight variations that created beautiful and interesting art.Alternatively, you may have cut snowflakes out of folded paper that allowed you to make a design with cuts that would magically transform in to a beautiful radial pattern.This assignment is to do the same.
 
-//Resources
-//p5.dom.js library
-//CDN
-//Copy and paste this into your html
-// < script src = "https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js" ></script >
 
-//or
+//Create a function to draw one ‘arm’ of your radial design and then use`rotate` to rotate your canvas a specified amount and then redraw your arm.You will find the most interesting designs will change after a certain amount of applications(maybe after a full rotation…?).Using parameters, alter the ‘arm’ and then continue the process.And by all means, don’t think you have to only use a small portion of the canvas for each iteration.Experiment and see what looks best.
 
-//Copy and paste content ofthe gist below to locate this library along - side your other scripts
-//https://gist.github.com/ken-teaches-web/2618d352c71a9019b070d0f272790afb (Links to an external site.)
-
-//Using google fonts for rendering text()
-//https://github.com/processing/p5.js/wiki/Drawing-Text-Using-Web-Fonts
+//Must have:
+//Must be a radial design generated from multiple applications of a function.
+//Must be parameterized with at least three parameters
+//Must only ‘draw’ within your function.Nothing should be drawn outside of your repeated function.
+//Should have:
+//Should be error - free.I should not see any errors in the dev console.
+//Should be clean, well commented code.
+//Should have appropriately named parameters.
+//Nice to have:
+//Ability to interact with sketch as it processes.
+//Ability to stop the draw loop.
