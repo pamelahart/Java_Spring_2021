@@ -9,13 +9,17 @@ function makeArm(rotateBy) {
   noFill();
   stroke(255);
   strokeWeight(1);
-  ellipse(150, 150 + alt, 150 - alt);
+  //ellipse(150, 150 + alt, 150 / alt);
+  bezier(alt - 10, alt + 10, 10, 10, 10, 90, 50, 80);
 }
 function draw() {
   translate(300, 300);
   rotate(rotateBy) // come back to This
   makeArm(rotateBy);
   rotateBy += 5;
+}
+function mousePressed() {
+    noLoop();
 }
 
 
