@@ -1,11 +1,13 @@
 let rectX = 0;
+let rectWidth = 75;
 function setup() {
   createCanvas(500, 500);
 }
+
 function draw () {
   background(155);
   drawShape();
-  rectX += 2;
+  rectX++;
 }
 
 function mousePressed() {
