@@ -1,8 +1,11 @@
 let rectX = 0;
 const rectWidth = 75;
 let clickCount = 0;
+let speed;
+
 function setup() {
   createCanvas(500, 500);
+  speed = random(1, 3);
 }
 
 function draw () {
