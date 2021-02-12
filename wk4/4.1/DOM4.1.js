@@ -1,47 +1,18 @@
-let rotateBy = 5;
-function setup() {
-  createCanvas(600, 600);
-  background(0);
-  angleMode(DEGREES);
-}
-function makeArm(rotateBy) {
-  let alt = Math.round(rotateBy / 360);
-  noFill();
-  stroke(255, 0, 0);
-  strokeWeight(1);
-  bezier(alt - 10, alt + 10, 10, 10, 10, 90, 50, 80);
+const myEmptyDiv = document.querySelector("#myEmptyDiv");
+const heading = document.createElement('h1');
+heading.innerHTML = 'Hello Llama Lovers!';
+heading.style.cursor = 'pointer';
+heading.addEventListener('click', handleHeadingClick);
+myEmptyDiv.appendChild(heading);
+
+function handleHeadingClick() {
+  console.log('Heading has been clicked');
+  document.body.style.backgroundColor = '#e28f8f';
 }
 
-  function makeArm2(rotateBy) {
-    let alt = Math.round(rotateBy / 300);
-    stroke(0, 0, 255);
-    strokeWeight(2);
-    ellipse(150, 150, 150 / alt);
-
-}
-function draw() {
-  translate(300, 300);
-  rotate(rotateBy)
-  makeArm(rotateBy);
-  rotateBy += 5;
-}
-function mousePressed() {
-    noLoop();
-   let s = second()
-   if (s = 5){ 
-
-   }
-   else {
-    makeArm2
-   }
-  }
-    
-  
-  
-  //red stops
-
-//function mouseReleased(fxn){
-// makeArm2(rotateBy + 5) //starts blue
+//function setup() {
+//  createCanvas(600, 600);
+ // background(0);
 
 //}
 
@@ -51,3 +22,4 @@ function mousePressed() {
 //Create a new headline element(h1 through h5 would work just fine).The text can be anything about llamas.
 //Append the new headline element to "myEmptyDiv".
 //And an event listener to your headline to change the background color of the whole window when the headline is clicked.
+//<script src="https://cdn.jsdelivr.net/npm/p5"></script><script src="https://cdn.jsdelivr.net/npm/p5"></script>
