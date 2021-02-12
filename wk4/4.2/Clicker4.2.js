@@ -11,14 +11,14 @@ function draw () {
 }
 
 function mousePressed() {
-  if ((mouseX >= rectX && mouseX <= 75) && (mouseY >= 0 && mouseY <= 75)) {
+  if ((mouseX >= rectX && mouseX <= 75) && (mouseY >= 0 && mouseY >= 0 && mouseY <= 75)) {
     console.log('hit');
   }
 }
 
 function drawShape() {
   fill('purple');
-  rect(recX, 0, 75, 75);
+  rect(rectX, 0, rectWidth, 75);
 }
 
 //Create a new p5.js project.  In the setup function, create a 500 x 500 canvas. In the draw function, create a shape (square or ellipse) and use one of the methods described in either the p5.js example or the reading from the project to determine if the use has clicked on the shape. Use this event handler to increment a variable.
