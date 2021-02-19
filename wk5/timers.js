@@ -1,7 +1,8 @@
 let blockX = 0;
 let blockY = 0;
 let drawTimer; 
-let speed = 50;
+const speed = 50;
+const distance = 2;
 
 function setup () {
     createCanvas(500, 500);
@@ -15,5 +16,11 @@ function drawBlock(x, y, color) {
 }
 
 drawTimer = window.setInterval(() => {
+    if(blockY -50 <= height) {
     drawBlock(blockX, blockY, 255);
+    blockY += distance;
+    } else {
+        blockY = 0;
+        blockX += 50;
+    }
 }, speed);
