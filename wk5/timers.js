@@ -9,11 +9,14 @@ function setup () {
     background(0);
 
 }
-
 function drawBlock(x, y, color) {
     fill(color || 255);
     rect(x, y, 50, 50);
 }
+function keyTyped() {
+    console.log('you pressed', key);
+}
+
 window.setTimeout(() => {
     drawTimer = window.setInterval(() => {
         if(blockY -50 <= height) {
