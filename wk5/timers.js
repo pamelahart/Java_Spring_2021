@@ -23,6 +23,9 @@ window.setTimeout(() => {
         blockY = 0;
         blockX += 50;
     }
+        if (blockY -50 > height && blockX - 50 > width)
+            window.clearInterval(drawTimer);
+            alert('done');
     
 }, speed);
 }, 1500);
