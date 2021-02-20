@@ -28,11 +28,12 @@ window.setTimeout(() => {
         if (blockY -50 <= height) {
             drawBlock(blockX, blockY, blockColor);
             blockY += distance;
+            
         } else {
         blockY = 0;
         blockX += 50;
-    }
-        if (blockY -50 > height && blockX - 50 > width)
+
+        } if (blockY -50 > height && blockX - 50 > width)
         { window.clearInterval(drawTimer);
             alert('done');}
 
