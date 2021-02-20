@@ -1,7 +1,7 @@
 let blockX = 0;
 let blockY = 0;
 let drawTimer; 
-const speed = 20;
+const speed = 10;
 const distance = 2;
 
 function setup () {
@@ -14,14 +14,15 @@ function drawBlock(x, y, color) {
     fill(color || 255);
     rect(x, y, 50, 50);
 }
-
-drawTimer = window.setInterval(() => {
-    if(blockY -50 <= height) {
-    drawBlock(blockX, blockY, 255);
-    blockY += distance;
-    } else {
+window.setTimeout(() => {
+    drawTimer = window.setInterval(() => {
+        if(blockY -50 <= height) {
+            drawBlock(blockX, blockY, 255);
+            blockY += distance;
+        } else {
         blockY = 0;
         blockX += 50;
     }
-
+    
 }, speed);
+}, 1500);
