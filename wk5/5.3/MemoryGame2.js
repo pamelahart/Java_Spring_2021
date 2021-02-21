@@ -6,7 +6,7 @@ let startingY = 175;
 let myRectangle = [];
 
 function setup() {
-  createCanvas(1000, 1200); // make smaller
+  createCanvas(1000, 1200); // make title, instructions & score fit within the canvas
 
   background('#8ED8F8'); // ffffcc
   fill('#141b30');
