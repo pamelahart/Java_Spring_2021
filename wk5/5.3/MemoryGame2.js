@@ -1,22 +1,23 @@
 /* let rectX = 0; // let statements can be changed by a function or reassignment 
 const rectHeight = 300; // must remain the same throughout- can't be changed regardless
 const rectWidth = 200;
-let startingX = 55;
-let startingY = 175;
+
 //let myRectangle (); */
 
 let myCard;
 const DOWN = 'down';
 const UP = 'up';
-letgameState = {
-
+let startingX = 55;
+let startingY = 175;
+const gameState = {
+  
 }
 
 function setup() {
   createCanvas(1000, 1200); // make title, instructions & score fit within the canvas
   background('#8ED8F8'); // ffffcc
-  let myCard = new Card();
-  fill('#141b30');
+  for (let i = 0; i < 5; i++);
+  //fill('#141b30');
 
 }
 function mousePressed(){
@@ -38,7 +39,7 @@ class Card {
         fill('ffffcc');
         rect(this.x, this.y, this.width, this.height, 10);
     } else {
-      fill(255);
+      fill('#aaa');
       rect(this.x, this.y, this.width, this.height, 10);
     }
   }
