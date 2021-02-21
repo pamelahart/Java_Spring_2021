@@ -1,12 +1,12 @@
 let rectX = 0; // let statements can be changed by a function or reassignment 
 const rectHeight = 300; // must remain the same throughout- can't be changed regardless
 const rectWidth = 200;
-let startingX = 50;
-let startingY = 50;
+let startingX = 55;
+let startingY = 175;
 let myRectangle = [];
 
 function setup() {
-  createCanvas(1000, 1000); // make smaller
+  createCanvas(1000, 1200); // make smaller
 
   background('#8ED8F8'); // ffffcc
   fill('#141b30');
