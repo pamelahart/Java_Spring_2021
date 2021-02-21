@@ -7,10 +7,10 @@ const distance = 2;
 
 function setup () {
     createCanvas(500, 500);
-    background(0);
+    background('#F29F05');
 }
 function drawBlock(x, y, color) {
-    fill(color || 255);
+    fill(color || '255');
     rect(x, y, 50, 50);
 }
 function keyTyped() {
@@ -28,7 +28,7 @@ window.setTimeout(() => {
         if (blockY -50 <= height) {
             drawBlock(blockX, blockY, blockColor);
             blockY += distance;
-            
+
         } else {
         blockY = 0;
         blockX += 50;
