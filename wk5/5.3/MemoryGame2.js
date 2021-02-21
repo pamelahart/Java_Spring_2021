@@ -33,18 +33,24 @@ class Card {
   constructor() {
     this.x = 100;
     this.y = 100;
-    this.width = 80;
-    this.height = 100;
+    this.width = 200;
+    this.height = 300;
     this.face = DOWN;
     this.show();
   }
   show () {
-    fill('ffffcc');
-    rect(this.x, this.y, this.width, this.height, 10);
+    if(this.face === DOWN) {
+        fill('ffffcc');
+        rect(this.x, this.y, this.width, this.height, 10);
+    } else {
+      fill('#aaa');
+      rect(this.x, this.y, this.width, this.height, 10);
+    }
   }
   didHit (mouseX, mouseY) {
     if (mouseX >= this.x && mouseX <= this.x + this.width && mouseY >= this.y && mouseY <= this.y + this.height) {
-        return true;
+      this.flip();  
+      return true;
     } else {
       return false;
     }
@@ -55,5 +61,6 @@ class Card {
     } else {
       this.face = DOWN;
     }
+    this.show();
   }
 } 
