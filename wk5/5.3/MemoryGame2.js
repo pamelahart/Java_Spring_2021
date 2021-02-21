@@ -7,6 +7,9 @@ let myRectangle = [];
 let myCard;
 const DOWN = 'down';
 const UP = 'up';
+letgameState = {
+
+}
 
 function setup() {
   createCanvas(1000, 1200); // make title, instructions & score fit within the canvas
