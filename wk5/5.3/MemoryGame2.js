@@ -31,5 +31,5 @@ class Card {
   show() {
     fill('ffffcc')
     rect(this.x, this.y, this.width, this.height, 10);
-
   }
+}
