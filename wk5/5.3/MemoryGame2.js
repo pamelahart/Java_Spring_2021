@@ -4,7 +4,6 @@ let startingX = 55
 let startingY = 175
 let cards = [];
 const gameState = {
-
 };
 
 let cardback;
@@ -16,16 +15,28 @@ function preload() {
     loadImage('images/card_GOOD HEALTH.png'),
     loadImage('images/card_HAPPINESS.png'),
     loadImage('images/card_WISDOM.png'),
+    loadImage('images/card_WISDOM.png'),
   ]
 }
-
 
 function setup() {
   createCanvas(1000, 1200); // make title, instructions & score fit within the canvas
   background('#8ED8F8'); // ffffcc
+  let selectedFaces = [];
+  for (let z = 0; z < 6; z++) {
+    const randomIdx = floor(random(cardfaceArray.length));
+    const face = cardfaceArray[randomIdx];
+    selectedFaces.push(face);
+    selectedFaces.push(face);
+    // remove the used cardface so it doesnt get randomly selected again
+    cardfaceArray.splice(randomIdx, 1);
+  }
+
+  selectedFaces = shuffleArray(selectedFaces);
   for (let rows = 0; rows < 3; rows++) { // varible (temp only available to this loop), condition (the true false statement. stops when the statement becomes false) , modifer ()... +=1 
     for (let columns = 0; columns < 4; columns++) {
-      cards.push(new Card(startingX, startingY));
+      const faceImage = selectedFaces.pop();
+      cards.push(new Card(startingX, startingY, faceImage));
       startingX += 225;
     }
     startingY += 325;
@@ -35,17 +46,19 @@ function setup() {
 function mousePressed(){
   for (let k = 0; k < cards.length; k++) {
     if(cards[k].didHit(mouseX, mouseY)) {
+      console.log('flipped, cards[k]')
     }
   } 
 }
 
 class Card {
-  constructor(x, y ) {
+  constructor(x, y, cardFaceImg) {
     this.x = x;
     this.y = y;
     this.width = 200;
     this.height = 300;
     this.face = DOWN;
+    this.cardFaceImg = cardFaceImg
     this.show();
   }
 
@@ -58,6 +71,7 @@ class Card {
       } else {
       fill('#aaa');
       rect(this.x, this.y, this.width, this.height, 10);
+      image(this.cardFaceImg, this.x, this.y);
     }
   }
   didHit (mouseX, mouseY) {
@@ -76,5 +90,19 @@ class Card {
     }
     this.show();
   }
+}
+  function shuffleArray (array) {
+  let counter = array.length;
+  while (counter >  0) {
+    // Pick random index
+    const idx = Math.floor(Math.random() * counter);
+    // decrease counter by 1 (decrement)
+    counter --;
+    // swap the last element with it
+    const temp = array[counter];
+    array[counter] = array[idx];
+    array[idx] = temp;
+  }
+    return array;
 } 
 
