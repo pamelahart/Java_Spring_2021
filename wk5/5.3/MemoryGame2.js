@@ -49,10 +49,35 @@ function setup() {
     startingX = 50; 
   }
 }
+
 function mousePressed(){
+  if (gameState.waiting) {
+    return;
+  }
   for (let k = 0; k < cards.length; k++) {
-    if(cards[k].didHit(mouseX, mouseY)) {
+    // first check flipped cards & then trigger next flip
+    if (gameState.flippedCards.length < 2 && cards[k].didHit(mouseX, mouseY)) {
       console.log('flipped, cards[k]')
+      gameState.flippedCards.push(cards[k]);
+    }
+  } 
+  if (gameState.flippedCards.length === 2) {
+    if (gameState.flippedCards[0].faceImage === gameState.flippedCards[1].faceImage){
+      // Cards match- add to score
+      //mark cards as flipped so they dont flip back
+      gameState.flippedCards[0], isMatch =true;
+      gameState.flippedCards[1], isMatch = true;
+      //empty flipped array
+      gameState.flippedCards.length = 0;
+      //increment the score
+      gameState.numMatched++;
+      loop();
+    } else {
+        gameState.waiting = true;
+        const loopTimeout = window.setTimeout(() => {
+          loop();
+          window.clearTimeout(loopTimeout);
+        }, 1000)
     }
   } 
 }
