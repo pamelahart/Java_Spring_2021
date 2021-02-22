@@ -1,10 +1,24 @@
-let cards = [];
 const DOWN = 'down';
 const UP = 'up';
 let startingX = 55
 let startingY = 175
-const rectHeight = 300; // must remain the same throughout- can't be changed regardless
-const rectWidth = 200;
+let cards = [];
+const gameState = {
+
+};
+
+let cardback;
+function preload() {
+  cardback = loadImage('images/card_FRONT.png');
+  cardfaceArray = [
+    loadImage('images/card_BALANCE.png'),
+    loadImage('images/card_FREEDOM.png'),
+    loadImage('images/card_GOOD HEALTH.png'),
+    loadImage('images/card_HAPPINESS.png'),
+    loadImage('images/card_WISDOM.png'),
+  ]
+}
+
 
 function setup() {
   createCanvas(1000, 1200); // make title, instructions & score fit within the canvas
@@ -39,7 +53,9 @@ class Card {
     if(this.face === DOWN) {
       fill('#141b30');
         rect(this.x, this.y, this.width, this.height, 10);
-    } else {
+        image(cardback, this.x, this.y);
+    
+      } else {
       fill('#aaa');
       rect(this.x, this.y, this.width, this.height, 10);
     }
