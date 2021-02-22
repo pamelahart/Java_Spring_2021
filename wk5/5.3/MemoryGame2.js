@@ -4,6 +4,12 @@ let startingX = 55
 let startingY = 175
 let cards = [];
 const gameState = {
+  totalPairs: 0,
+  flippedCards:[],
+  numMatched: 0,
+  attempts: 0,
+  waiting: false,
+
 };
 
 let cardback;
@@ -15,13 +21,13 @@ function preload() {
     loadImage('images/card_GOOD HEALTH.png'),
     loadImage('images/card_HAPPINESS.png'),
     loadImage('images/card_WISDOM.png'),
-    loadImage('images/card_WISDOM.png'),
+    loadImage('images/card_STRENGTH.png'),
   ]
 }
 
 function setup() {
   createCanvas(1000, 1200); // make title, instructions & score fit within the canvas
-  background('#8ED8F8'); // ffffcc
+  background('#8ED8F8');
   let selectedFaces = [];
   for (let z = 0; z < 6; z++) {
     const randomIdx = floor(random(cardfaceArray.length));
@@ -58,20 +64,21 @@ class Card {
     this.width = 200;
     this.height = 300;
     this.face = DOWN;
-    this.cardFaceImg = cardFaceImg
+    this.cardFaceImg = cardFaceImg;
+    this.isMatch = false;
     this.show();
   }
 
   show () {
-    if(this.face === DOWN) {
-      fill('#141b30');
-        rect(this.x, this.y, this.width, this.height, 10);
-        image(cardback, this.x, this.y);
-    
-      } else {
+    if(this.face === UP || this.isMatch) {
       fill('#aaa');
       rect(this.x, this.y, this.width, this.height, 10);
       image(this.cardFaceImg, this.x, this.y);
+    
+      } else {
+      fill('#141b30');
+      rect(this.x, this.y, this.width, this.height, 10);
+      image(cardback, this.x, this.y);
     }
   }
   didHit (mouseX, mouseY) {
