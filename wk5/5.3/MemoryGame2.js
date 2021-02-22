@@ -15,19 +15,14 @@ function setup() {
       startingX += 225;
     }
     startingY += 325;
-    startingX = 50;
+    startingX = 50; 
   }
 }
 function mousePressed(){
-//console.log(myCard.didHit(mouseX, mouseY));
-  for ( let cardsArray_index = 0; cardsArray_index < cards.length; cardsArray_index++) {
-    let tempCard = cards[cardsArray_index];
-    if (tempCard.didHit(mouseX, mouseY)) {
-      tempCard.flip()
-      console.log (tempCard)
+  for (let k = 0; k < cards.length; k++) {
+    if(cards[k].didHit(mouseX, mouseY)) {
     }
-
-  }
+  } 
 }
 
 class Card {
