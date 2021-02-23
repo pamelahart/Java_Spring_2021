@@ -1,11 +1,11 @@
 const DOWN = 'down';
 const UP = 'up';
-let startingX = 55
-let startingY = 175
+let startingX = 55;
+let startingY = 175;
 let cards = [];
 const gameState = {
-  totalPairs: 0,
-  flippedCards:[],
+  totalPairs: 6,
+  flippedCards: [],
   numMatched: 0,
   attempts: 0,
   waiting: false,
@@ -48,6 +48,28 @@ function setup() {
     startingY += 325;
     startingX = 50; 
   }
+}
+function draw () {
+  //background('#8ED8F8');
+  if(gameState.numMatched === gameState.totalPairs) {
+  fill('#141b30');
+  textSize(55);
+  text('You are a Zen Master!', 175, 1175);
+  noLoop();
+}
+  for (let k = 0; k < cards.length; k++) {
+      if (!cards[k].isMatch) {
+      cards[k].face = DOWN;
+   }
+   cards [k].show(); 
+  }
+  noLoop();
+  gameState.flippedCards.length = 0;
+  gameState.waiting = false;
+  fill('#141b30');
+  textSize(36);
+  text('attempts ' + gameState.attempts, 100, 500);
+  text('matches ' + gameState.numMatched, 100, 450);
 }
 
 function mousePressed(){
