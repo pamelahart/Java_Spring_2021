@@ -67,9 +67,14 @@ function draw () {
   gameState.flippedCards.length = 0;
   gameState.waiting = false;
   fill('#141b30');
-  textSize(36);
+  textSize(40);
+  text('Bonsai Memory Game ' + gameState.title, 280, 65);
+  textSize(30);
   text('Attempts ' + gameState.attempts, 50, 150);
   text('Matches ' + gameState.numMatched, 280, 150);
+  textSize(18);
+  text('Find your Zen. Match the Bonsai trees.' + gameState.bodyCopy, 280, 95);
+  
 }
 
 function mousePressed(){
