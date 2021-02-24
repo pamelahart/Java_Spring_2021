@@ -9,7 +9,8 @@ const gameState = {
   numMatched: 0,
   attempts: 0,
   waiting: false,
-  title: "Bonsai Memory Game"
+  title: "Bonsai Memory Game",
+  titleTextSize: 40,
 
 };
 
@@ -68,7 +69,7 @@ function draw () {
   gameState.flippedCards.length = 0;
   gameState.waiting = false;
   fill('#141b30');
-  textSize(40);
+  textSize(gameState.titleTextSize);
   text(gameState.title, 280, 65);
   textSize(30);
   text('Attempts ' + gameState.attempts, 50, 150);
