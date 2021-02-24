@@ -83,8 +83,9 @@ function mousePressed(){
   }
   for (let k = 0; k < cards.length; k++) {
     // first check flipped cards & then trigger next flip
+
+    if (gameState.flippedCards.length < 2 && cards(k), didHit(mouseX, mouseY)){
     if (cards[k].didHit(mouseX, mouseY) && gameState.flippedCards.length ) {
-      console.log('flipped, cards[k]')
       gameState.flippedCards.push(cards[k]);
     }
   } 
@@ -164,4 +165,4 @@ class Card {
   }
     return array;
 } 
-
+}
