@@ -52,7 +52,7 @@ function setup() {
   }
 }
 function draw () {
-  //background('#8ED8F8');
+  background('#8ED8F8');
   if(gameState.numMatched === gameState.totalPairs) {
   fill('#141b30');
   textSize(55);
@@ -73,7 +73,9 @@ function draw () {
   text(gameState.title, 280, 65);
   textSize(30);
   text('Attempts ' + gameState.attempts, 50, 150);
+  noLoop();
   text('Matches ' + gameState.numMatched, 280, 150);
+  noLoop();
   textSize(18);
   text('Find your Zen. Match the Bonsai trees.' + gameState.bodyCopy, 280, 95);
   
@@ -91,8 +93,9 @@ function mousePressed(){
       gameState.flippedCards.push(cards[k]);
     }
   }
-   
   if (gameState.flippedCards.length === 2) {
+  gameState.attempts ++;
+
     if (gameState.flippedCards[0].cardFaceImg=== gameState.flippedCards[1].cardFaceImg){
       
       // Cards match- add to score
@@ -111,6 +114,7 @@ function mousePressed(){
           loop();
           window.clearTimeout(loopTimeout);
         }, 1000)
+        //statement to change attempt number, also need match number w/out overwriting
     }
   } 
 }
