@@ -172,5 +172,5 @@ class Card {
     array[idx] = temp;
   }
     return array;
-} 
+  }
 
