@@ -91,7 +91,7 @@ function mousePressed(){
   }
    
   if (gameState.flippedCards.length === 2) {
-    if (gameState.flippedCards[0].faceImage === gameState.flippedCards[1].faceImage){
+    if (gameState.flippedCards[0].cardFaceImg=== gameState.flippedCards[1].cardFaceImg){
       
       // Cards match- add to score
       //mark cards as flipped so they dont flip back
