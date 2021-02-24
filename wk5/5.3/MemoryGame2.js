@@ -9,6 +9,7 @@ const gameState = {
   numMatched: 0,
   attempts: 0,
   waiting: false,
+  title: "Bonsai Memory Game"
 
 };
 
@@ -68,7 +69,7 @@ function draw () {
   gameState.waiting = false;
   fill('#141b30');
   textSize(40);
-  text('Bonsai Memory Game ' + gameState.title, 280, 65);
+  text(gameState.title, 280, 65);
   textSize(30);
   text('Attempts ' + gameState.attempts, 50, 150);
   text('Matches ' + gameState.numMatched, 280, 150);
