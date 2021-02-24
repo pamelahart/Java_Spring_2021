@@ -11,7 +11,8 @@ const gameState = {
   waiting: false,
   title: "Bonsai Memory Game",
   titleTextSize: 40,
-
+  instruct: "Find your Zen. Match the Bonsai trees.",
+  instructTextSize: 18,
 };
 
 let cardback;
@@ -76,8 +77,9 @@ function draw () {
   noLoop();
   text('Matches ' + gameState.numMatched, 280, 150);
   noLoop();
-  textSize(18);
-  text('Find your Zen. Match the Bonsai trees.' + gameState.bodyCopy, 280, 95);
+  textSize(gameState.instructTextSize);
+  text(gameState.instruct, 310,95);
+  
   
 }
 
