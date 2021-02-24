@@ -85,6 +85,7 @@ function mousePressed(){
     // first check flipped cards & then trigger next flip
 
     if (gameState.flippedCards.length < 2 && cards(k), didHit(mouseX, mouseY)){
+    }
     if (cards[k].didHit(mouseX, mouseY) && gameState.flippedCards.length ) {
       gameState.flippedCards.push(cards[k]);
     }
@@ -165,4 +166,4 @@ class Card {
   }
     return array;
 } 
-}
+
