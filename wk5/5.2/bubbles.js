@@ -5,20 +5,33 @@ function setup() {
   createCanvas(600, 400);
   bubble1 = new Bubble();
   bubble2 = new Bubble();
-  print(bubble.x, bubble.y);
+  bubble3 = new Bubble();
 }
-
 function draw() {
   background(0);
   bubble1.move();
   bubble1.show();
   bubble2.move();
   bubble2.show();
+  bubble3.move();
+  bubble3.show();
+  for (bubble = 0; Bubble< 5; Bubble++);
+  //I am having no success at the loop. I still dont seem to understand how to add it properly. Need help on this. The intent was to have it randomly move 5 times and stop. 
 }
 class Bubble {
   constructor () {
     this.x = 200;
     this.y = 150;
+  }
+  move() {
+    this.x = this.x + random(-5, 5);
+    this.y = this.y + random(-5, 5);
+  }
+  show() {
+    stroke(255);
+    strokeWeight(4);
+    noFill();
+    ellipse(this.x, this.y, 24, 24);
   }
 }
 
@@ -44,4 +57,15 @@ Convert it to a class.
 In the constructor, set the shape's x and y coordinates as class properties (a variable that is specific to the class).
 Create a method(a class- specific function)  that renders the shape with the class properties (probably something like this.x andn this.y—you may also want to use class properties with width and height).
 Create a method that gives the shape some sort of movement.
-Use a for loop in the draw function to draw a number of instances of your class on the canvas. */
+Use a for loop in the draw function to draw a number of instances of your class on the canvas.
+
+For Loops
+To write a for loop, first type the for keyword, and then in parentheses () provide three things:
+
+Declare a variable to keep track of your pattern, and initialize it to the number your pattern starts at: let lineX = 75;
+Write a test that evaluates to a boolean value of false whenever the pattern should stop: lineX <= 225;
+Reassign the variable so that it follows the pattern: lineX = lineX + 75; (which can be shortened to lineX += 75)
+Then inside curly brackets {}, write the code that uses your variable to follow the pattern. Putting it all together, it looks like this:
+
+
+*/
