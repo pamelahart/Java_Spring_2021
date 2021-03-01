@@ -1,6 +1,7 @@
 new Vue({
     el: "#myApp",
     data: {
+        
         llamaFact1: "Llamas are smart and easy to train.",
         llamaFact2: "spit when they're agitated.",
         llamaFact3: "Llamas are vegetarians.",
