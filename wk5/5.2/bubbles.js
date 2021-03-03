@@ -1,22 +1,23 @@
 let bubble1;
 let bubble2;
+let bubble3;
+let number = 0;
+let bubbleArray=[];
 
 function setup() {
   createCanvas(600, 400);
-  bubble1 = new Bubble();
-  bubble2 = new Bubble();
-  bubble3 = new Bubble();
+  for (let loopVar=0; loopVar<5; loopVar++){ // loops start w/ for, need 3 sets, no spaces , + = # to increase more
+  let bubbs = new Bubble(); // this is an instance,  together
+  bubbleArray.push(bubbs) // this is the function of adding a new bubble to the array until there are 5
+  }
 }
 function draw() {
   background(0);
-  bubble1.move();
-  bubble1.show();
-  bubble2.move();
-  bubble2.show();
-  bubble3.move();
-  bubble3.show();
-  for (bubble = 0; Bubble< 5; Bubble++);
-  //I am having no success at the loop. I still dont seem to understand how to add it properly. Need help on this. The intent was to have it randomly move 5 times and stop. 
+  for (let loopVar = 0; loopVar < 5; loopVar++) {
+    bubbleArray[loopVar].move();
+    bubbleArray[loopVar].show();
+    
+  }
 }
 class Bubble {
   constructor () {
@@ -66,6 +67,4 @@ Declare a variable to keep track of your pattern, and initialize it to the numbe
 Write a test that evaluates to a boolean value of false whenever the pattern should stop: lineX <= 225;
 Reassign the variable so that it follows the pattern: lineX = lineX + 75; (which can be shortened to lineX += 75)
 Then inside curly brackets {}, write the code that uses your variable to follow the pattern. Putting it all together, it looks like this:
-
-
-*/
+ */
