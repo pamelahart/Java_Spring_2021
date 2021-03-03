@@ -1,14 +1,26 @@
 
 body {
     
-    margin: auto;
-    
 }
 h1 {
-    text-align: center;
-    color: #323334;
+    line-height: 325%;
+    margin-left: 25;
+    margin-right: 100;
+    color: #ffffff;
+    font-family:'Roboto', sans-serif;
+    text-align: right;
+    
 }
-p {
-   text-align: center;
-    color: #323334; 
+h2 {
+   text-align: right;
+   margin-left: 25;
+   margin-right: 100;
+   color: #ffffff; 
+   font-family:'Roboto', sans-serif;
+   font-size: 30px;
+   max-width: 85%;
 }
+    html {
+        background: #eee url('llama.jpg')no-repeat center;
+
+    }
