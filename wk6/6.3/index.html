@@ -7,11 +7,14 @@
 
 <body>
     <div id="myApp">
-        <h1>{{message}}</h1>
+        <h1 v-if="llamaFriendly===false">{{llamaFact2}}
+        </h1>
+        <h1>{{llamaFact3}}</h1>
+
+        
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
-    <script src="lib/script.js"></script>
     <script src="Llamas.js"></script>
 </body>
 </html>
