@@ -3,22 +3,28 @@ body {
     
 }
 h1 {
-    line-height: 325%;
-    margin-left: 25;
+    line-height: 100%;
+    margin-left: 100;
     margin-right: 100;
-    color: #ffffff;
+    color: #70c4de;
     font-family:'Roboto', sans-serif;
     text-align: right;
+    font-size: 100px;
+    padding-top: 10em;
+    max-width: 73%;
+     
+
     
 }
 h2 {
-   text-align: right;
-   margin-left: 25;
+   line-height: 100%;
+    text-align: right;
+   margin-left: 100;
    margin-right: 100;
    color: #ffffff; 
    font-family:'Roboto', sans-serif;
-   font-size: 30px;
-   max-width: 85%;
+   font-size: 28px;
+   max-width: 73%;
 }
     html {
         background: #eee url('llama.jpg')no-repeat center;
