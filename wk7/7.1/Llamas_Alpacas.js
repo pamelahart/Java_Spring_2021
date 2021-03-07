@@ -1,8 +1,8 @@
 new Vue({
     el: "#app",
     data: {
-        LlamaVsAlpaca1: https://en.wikipedia.org/wiki/Alpaca,
-
+        alpaca: https://en.wikipedia.org/wiki/Alpaca,
+        llama: https://en.wikipedia.org/wiki/Llama
     }
 });
 
