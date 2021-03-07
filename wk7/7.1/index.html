@@ -2,15 +2,14 @@
 <html lang="en">
 <head>
     <title>Llamas vs. Alpacas</title>
-    <link href="./main.css" rel="stylesheet"/>
     <link rel="stylesheet" href="lib/style.css">
 </head>
 
 <body> 
     <h1>Llamas vs. Alpacas</h1>
-    <div id="app"><v-cloak>
-        <a v-bind:href="apaca">My link</a>
-        <a v-bind:href="llama">My link</a>
+    <div id="app" v-cloak>
+        <a v-bind:href="alpaca">Alpaca Facts</a>
+        <a v-bind:href="llama">Llama Facts</a>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <script src="Llamas_Alpacas.js"></script>
@@ -28,5 +27,11 @@ Use v-cloak to hide the templating before Vue loads
 Should have links to the wikipedia pages for both llamas and alpacas. These links should use attribute binding.
 Should have examples of both style binding and class binding.
 
-*** also my scripts for style... are those correct? video vs older html copy- do I need both?
+*** QUESTIONS:
+VUE- does it always have brackets? Does it live in both JS & CSS? 
+what is a mustache? the curly brackets? curly brackets when theres 
+also my scripts for style... are those correct? video vs older html copy- do I need both?
+Notes on Attribute Binding:
+uses a href= normally in HTML, but w/ VUE, can't do that. 
+must use <a v-bind:href=" ">My Link</a>
 // -->
