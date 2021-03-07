@@ -1,13 +1,13 @@
 
 body {
-    
+      font-family: 'Roboto', sans-serif;
 }
 h1 {
     line-height: 100%;
     margin-left: 100;
     margin-right: 100;
     color: #70c4de;
-    font-family:'Roboto', sans-serif;
+    font-family: 'Akaya Kanadaka', cursive;
     text-align: right;
     font-size: 100px;
     padding-top: 10em;
@@ -27,6 +27,6 @@ h2 {
    max-width: 73%;
 }
     html {
-        background: #eee url('llama.jpg')no-repeat center;
+        background: #eee url('cookie1.jpg')no-repeat center;
 
     }
