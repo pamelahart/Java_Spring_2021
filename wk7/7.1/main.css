@@ -5,3 +5,7 @@ html {
 [v-cloak] {
     diplay: none
 }
+    html {
+        background: #eee url('Alpaca.jpg')no-repeat center;
+
+}
