@@ -7,14 +7,15 @@ h1 {
     margin-left: 800;
     margin-right: 100;
     color: rgb(250, 248, 248);
-    text-align: left;
+    text-align: center;
     font-size: 100px;
     padding-top: 10em;
     max-width: 73%;
 }
-p {
+a {
     font-size: 50px;
     color: rgb(250, 248, 248);
+    text-align: center;
 }
 html {
     background: #eee url('Alpaca.jpg')no-repeat center;
