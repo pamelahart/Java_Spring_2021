@@ -1,32 +1,29 @@
 
 body {
-      font-family: 'Roboto', sans-serif;
-}
-h1 {
-    line-height: 100%;
+      
+    font-family: 'Roboto', sans-serif;
     margin-left: 100;
     margin-right: 100;
-    color: #70c4de;
+    font: size 100px;
+    padding-top: 1em;
+    max-width: 73%;
+    color: #060933; 
+}
+h1 {
+   /*  line-height: 100%; */
+    margin-left: 100;
+    margin-right: 100;
+    color: #040474;
     font-family: 'Akaya Kanadaka', cursive;
     text-align: right;
     font-size: 100px;
-    padding-top: 10em;
+    padding-top: 1em;
     max-width: 73%;
-     
 
-    
 }
-h2 {
-   line-height: 100%;
-    text-align: right;
-   margin-left: 100;
-   margin-right: 100;
-   color: #ffffff; 
-   font-family:'Roboto', sans-serif;
-   font-size: 28px;
-   max-width: 73%;
-}
-    html {
-        background: #eee url('cookie1.jpg')no-repeat center;
-
-    }
+/*     html {
+        background: 
+        #eee url('pale_blue_background.jpg')no-repeat center;
+        max-width:200%;
+        height:auto;
+    } */

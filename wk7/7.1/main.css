@@ -1,11 +1,26 @@
 
-html {
-    font-size: 18px;
-}
 [v-cloak] {
-    diplay: none
+    diplay: none 
 }
-    html {
-        background: #eee url('Alpaca.jpg')no-repeat center;
+h1 {
+    line-height: 100%;
+    margin-left: 800;
+    margin-right: 100;
+    color: rgb(250, 248, 248);
+    text-align: left;
+    font-size: 100px;
+    padding-top: 10em;
+    max-width: 73%;
+}
+p {
+    font-size: 50px;
+    color: rgb(250, 248, 248);
+}
+html {
+    background: #eee url('Alpaca.jpg')no-repeat center;
+    background-color: teal;
+    background-size: 1000px 800px;
+    background-repeat: no-repeat;
+    padding: 15px;
 
 }

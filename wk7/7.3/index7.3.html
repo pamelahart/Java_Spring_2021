@@ -4,15 +4,33 @@
     <title>Cookie Show & Tell</title>
     <link href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Roboto&display=swap" rel="stylesheet">
     <link href="./main.css" rel="stylesheet" />
-    <link rel="stylesheet" href="lib/style.css">
 </head>
 
 <body>
-    <script src="cookie.js"></script>
+    
     <H1>Cookies Make Me Happy</H1>
     <div id="myApp">
-      <p v-for= 
+      <table>
+        <thread>
+          <th>image</th>
+          <th>name</th>
+          <th>time</th>
+          <th>yields</th>
+          <th>recipe</th>
+        </thread> 
+        <tbody>
+          <tr v-for="console in consoles"> 
+            <td>image here</td>
+            <td>{{console.name}}</td>
+            <td>{{console.time}}</td>
+            <td>{{console.yields}}</td>
+            <td>{{console.recipe}}</td>
+          </tr>
+        </tbody> 
+      </table>
+
     </div> 
+    <script src="cookie.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <script src="scripts/collection.js"></script>
 </body>

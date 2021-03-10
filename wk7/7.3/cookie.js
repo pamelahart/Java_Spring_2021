@@ -1,41 +1,49 @@
-let vm = new VTTCue({
+let vm = new Vue({
     el: "#myApp",
     data: {
         cookies: [
         {
-            name: 'Chocolate Chip',
-            prep: '15 min',
+            image: '/cookie6.jpg',
+            name: 'Spice',
             time: '1 hour 30 minutes',
             yields: '48',
-            recipe: "Whisk together flour, cocoa powder, baking soda, and salt in a bowl; set aside. In a large bowl,   beat butter and sugars on medium speed of a hand mixer until fluffy, about 3 minutes.Add eggs one at a time, beating well after each addition until smooth; beat in vanilla. Add dry ingredients, and beat until just combined; stir in chocolate chips.Roll cookies into 4 - ounce balls and place on a parchment paper - lined baking sheet about 4 - inches apart.Refrigerate for 4 hours or up to overnight. Heat oven to 350°. Bake cookies, rotating once halfway through, about 15 minutes.Cool slightly before serving."
+            recipe: 'https://www.bettycrocker.com/recipes/mexican-spice-cookies/f0d0b866-d094-4ce7-9d0a-e41e911e8db6',
             }, {
-
+                image: '/cookie3.jpg',
                 name: 'Peanut Butter',
-                prep: '15 min',
                 time: '1 hour 30 minutes',
                 yields: '48',
-                recipe: "Whisk together flour, cocoa powder, baking soda, and salt in a bowl; set aside. In a large bowl,beat butter and sugars on medium speed of a hand mixer until fluffy, about 3 minutes.Add eggs one at a time, beating well after each addition until smooth; beat in vanilla. Add dry ingredients, and beat until just combined; stir in chocolate chips.Roll cookies into 4 - ounce balls and place on a parchment paper - lined baking sheet about 4 - inches apart.Refrigerate for 4 hours or up to overnight. Heat oven to 350°. Bake cookies, rotating once halfway through, about 15 minutes.Cool slightly before serving."
+                recipe: "https://www.bettycrocker.com/recipes/classic-peanut-butter-blossom-cookies/a3563f6e-96b0-443f-ae0a-53cef4be6db6"
             }, {
+                image: '/cookie4.jpg',
                 name: 'Macroon',
-                prep: '15 min',
                 time: '1 hour 30 minutes',
                 yields: '48',
-                recipe: "Whisk together flour, cocoa powder, baking soda, and salt in a bowl; set aside. In a large bowl,beat butter and sugars on medium speed of a hand mixer until fluffy, about 3 minutes.Add eggs one at a time, beating well after each addition until smooth; beat in vanilla. Add dry ingredients, and beat until just combined; stir in chocolate chips.Roll cookies into 4 - ounce balls and place on a parchment paper - lined baking sheet about 4 - inches apart.Refrigerate for 4 hours or up to overnight. Heat oven to 350°. Bake cookies, rotating once halfway through, about 15 minutes.Cool slightly before serving."
+                recipe: "https://www.bettycrocker.com/recipes/french-macarons-with-bittersweet-chocolate-ganache/01eb4eb4-afda-41ff-b38e-34440efd6bf1"
             }, {
+                image: '/cookie2.jpg',
                 name: 'Ginger',
-                prep: '15 min',
                 time: '1 hour 30 minutes',
                 yields: '48',
-                recipe: "Whisk together flour, cocoa powder, baking soda, and salt in a bowl; set aside. In a large bowl,beat butter and sugars on medium speed of a hand mixer until fluffy, about 3 minutes.Add eggs one at a time, beating well after each addition until smooth; beat in vanilla. Add dry ingredients, and beat until just combined; stir in chocolate chips.Roll cookies into 4 - ounce balls and place on a parchment paper - lined baking sheet about 4 - inches apart.Refrigerate for 4 hours or up to overnight. Heat oven to 350°. Bake cookies, rotating once halfway through, about 15 minutes.Cool slightly before serving."
+                recipe: "https://www.bettycrocker.com/recipes/spicy-ginger-cookies/662e8cf4-9a77-45ae-a682-8c9fbd10ad7d"
             }, {
+                image: '/cookie5.jpg',
                 name: 'Double Chocolate',
-                prep: '15 min',
                 time: '1 hour 30 minutes',
                 yields: '48',
-                recipe: "Whisk together flour, cocoa powder, baking soda, and salt in a bowl; set aside. In a large bowl,beat butter and sugars on medium speed of a hand mixer until fluffy, about 3 minutes.Add eggs one at a time, beating well after each addition until smooth; beat in vanilla. Add dry ingredients, and beat until just combined; stir in chocolate chips.Roll cookies into 4 - ounce balls and place on a parchment paper - lined baking sheet about 4 - inches apart.Refrigerate for 4 hours or up to overnight. Heat oven to 350°. Bake cookies, rotating once halfway through, about 15 minutes.Cool slightly before serving."
+                recipe: 'https://www.bettycrocker.com/recipes/double-chocolate-pudding-cookies/1cbe9bf1-307b-4aae-96e7-b2c7be4087a1'
             }
         ]}
     })
+
+function setup() {
+    createCanvas(700, 1500); 
+    background('#8ED8F8');
+}
+
+function draw() {
+    fill('#141b30');
+}
 
     // What are mustaches???? same as curly brackets? why are they now called this?
 //<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
