@@ -6,13 +6,13 @@ let vm = new Vue({
             image: '/cookie6.jpg',
             name: 'Spice',
             time: '1 hour 30 minutes',
-            yields: '48',
+            yields: '30',
             recipe: 'https://www.bettycrocker.com/recipes/mexican-spice-cookies/f0d0b866-d094-4ce7-9d0a-e41e911e8db6',
             }, {
                 image: '/cookie3.jpg',
                 name: 'Peanut Butter',
-                time: '1 hour 30 minutes',
-                yields: '48',
+                time: '1 hour',
+                yields: '36',
                 recipe: "https://www.bettycrocker.com/recipes/classic-peanut-butter-blossom-cookies/a3563f6e-96b0-443f-ae0a-53cef4be6db6"
             }, {
                 image: '/cookie4.jpg',
@@ -23,8 +23,8 @@ let vm = new Vue({
             }, {
                 image: '/cookie2.jpg',
                 name: 'Ginger',
-                time: '1 hour 30 minutes',
-                yields: '48',
+                time: '1 hour 40 minutes',
+                yields: '20',
                 recipe: "https://www.bettycrocker.com/recipes/spicy-ginger-cookies/662e8cf4-9a77-45ae-a682-8c9fbd10ad7d"
             }, {
                 image: '/cookie5.jpg',
