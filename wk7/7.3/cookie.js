@@ -1,5 +1,5 @@
 let vm = new Vue({
-    el: "#myApp",
+    el: "#myCookieApp",
     data: {
         cookies: [
         {
