@@ -4,24 +4,26 @@
 }
 h1 {
     line-height: 100%;
-    margin-left: 800;
+    margin-left: 100%
     margin-right: 100;
     color: rgb(250, 248, 248);
     text-align: center;
     font-size: 100px;
     padding-top: 10em;
+    padding-left: 2.5em;
     max-width: 73%;
 }
 a {
     font-size: 50px;
     color: rgb(250, 248, 248);
-    text-align: center;
+    padding-left: 10em;
+
 }
 html {
     background: #eee url('Alpaca.jpg')no-repeat center;
     background-color: teal;
     background-size: 1000px 800px;
     background-repeat: no-repeat;
-    padding: 15px;
 
 }
+
