@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Time</title>
+    <link href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Roboto&display=swap" rel="stylesheet">
+    <link href="./main.css" rel="stylesheet" />
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <!--  <script src="scripts/collection.js"></script> DO I need both?-->
+</head>
+
+<body>
+    
+    <H1>It's Cookie Time!</H1>
+   
+    <div id="myCookieApp"> <!-- this is the el in the java script file- must match exactly -->
+      <table>
+        <thead>
+          <th>Cookie</th>
+          <th>Name</th>
+          <th>Time</th>
+          <th>Yields</th>
+          <th>Recipe</th>
+        </thead> 
+        <tbody>
+            <tr v-for="(cookie, idx) in cookies"
+            v-bind:class="{even: idx % 2 ===0}">
+            <td><img v-bind:src="cookie.image" v-bind:alt="cookie.name + '' + cookie.name" /></td>
+            <td>{{cookie.name}}</td>
+            <td>{{cookie.time}}</td>
+            <td>{{cookie.yields}}</td>
+            <td><a v-bind:href="cookie.recipe">Get the Recipe!</a></td>
+          </tr>
+        </tbody> 
+      </table>
+    </div> 
+
+   <div class="Big Cookie">
+    <img src="Big_Cookie1.png" alt="chocolate chip cookie" width="2000" height="2000"></div>
+  <style>
+    body {
+      background-image: url('pale_blue_background.jpg');
+      background-size: cover;
+    }
+  </style>
+  
+  <script src="cookie.js"></script>
+</body>
+
+</html>
+
+<!-- 7.A | ✳️ Assignment 7: Show and Tell Collection
+11 unread reply.11 reply.
+Estimated time: up to 4 hours
+
+INSTRUCTIONS
+Create a list displaying a collection of items with conditional formatting.
+
+Select an item that you collect or would like to collect (baseball cards, European high-performance cars, Power Ranger
+figures; it can literally be anything). Create an POJO (plain old javascript object) that represents one unit of that
+collection. For example, if I was selecting retro video game consoles, my first POJO would look like this:
+
+For this assignment, your collection object should have 3 to 5 properties. Create an array of exactly 5 of these objects
+and include this array as one of the properties in your Vue data object.
+
+
+
+var myVue = new Vue({
+el: "#app",
+data: {
+consoles: [
+{...}, // this would be the NES object
+{...}, // and this might be the N64
+// and so on
+]
+}
+});
+
+Use the array you just made to create a list of your collection using v-for to render each item as one row of you list.
+You are not constrained to using a table for you html; you may use div or some combination of un-ordered lists and divs.
+Each row should display at least 4 properties from you collection objects. The values of each property will make up the
+columns in your list.
+
+You should make an appropriate row with column headings as well as an appropriate page heading for the collection in
+general.
+
+Additional requirements:
+
+Use conditional class bindings to alter one set of rows from the rest. This could be as simple as make every other row
+darker or displaying a special styling some subset in your collection. (For example, Nintendo consoles may have a
+Nintendo logo applied via CSS, or the most valuable console may use a CSS class to impose two dollar signs to its row).
+If you do something other than odd and even rows, please indicate with an explanation (perhaps in the form of a legend)
+somewhere on your page.
+
+Future consideration:
+
+This project will serve as the base for next week’s assignment where we learn to add new items to and delete items from
+your collection. Keep that in mind as you choose your content. I would recommend something you really are interested in.
+
+Rubric:
+
+Following instruction: up to 5 points
+(Non-Vue) Javascript code and syntax: up to 5 points
+Appropriate creation and placement of your collection array on the Vue data object: up to 5 points
+Displaying each item of your collection using v-for directive: up to 10 points
+Conditionally applying CSS styles or classes on specific rows (the subset of your collection as mentioned above): Up to
+10 points
+Overall design of page: up to 5 points -->

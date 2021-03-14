@@ -1,0 +1,41 @@
+h1 {
+   /*  line-height: 100%; */
+    color: #040474;
+    font-family: 'Akaya Kanadaka', cursive;
+    text-align: center;
+    font-size: 100px;
+    padding-top: 1em;
+    padding-left: 0em;
+   
+}
+.even { /*  I tried changing this to even and same result happened- why? */
+    background:#eee;
+} 
+.odd {
+    background:#779cdb
+}
+table {
+    margin:0 auto;
+    border: 7px solid #040474;
+}
+tr {
+    color: #040474;
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    padding-left: 10em;
+    padding-right: 10em;
+
+}
+td {
+    color: #040474;
+    font-family: 'Roboto, bold', sans-serif;
+    text-align: center;
+    font-size: 30px;
+    padding-right: 0em;
+   
+}
+Big Cookie {
+    position: absolute; 
+    left: 15px; 
+}
+/*  add a class to big cookie and then it should work - i've tried for 2 days to get it to move and no luck. Need to move onto the other projects Im behind in.*/
