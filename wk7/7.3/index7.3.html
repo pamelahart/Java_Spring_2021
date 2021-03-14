@@ -14,28 +14,39 @@
 
 <body>
     
-    <H1>Cookies Make You Happy!</H1>
-    <div id="myCookieApp">
+    <H1>It's Cookie Time!</H1>
+   
+    <div id="myCookieApp"> <!-- this is the el in the java script file- must match exactly -->
       <table>
         <thead>
-          <th>image</th>
-          <th>name</th>
-          <th>time</th>
-          <th>yields</th>
-          <th>recipe</th>
+          <th>Cookie</th>
+          <th>Name</th>
+          <th>Time</th>
+          <th>Yields</th>
+          <th>Recipe</th>
         </thead> 
         <tbody>
-          <tr v-for="console in consoles"> 
-            <td>image here</td>
-            <td>{{console.name}}</td>
-            <td>{{console.time}}</td>
-            <td>{{console.yields}}</td>
-            <td>{{console.recipe}}</td>
+            <tr v-for="(cookie, idx) in cookies"
+            v-bind:class="{even: idx % 2 ===0}">
+            <td><img v-bind:src="cookie.image" v-bind:alt="cookie.name + '' + cookie.name" /></td>
+            <td>{{cookie.name}}</td>
+            <td>{{cookie.time}}</td>
+            <td>{{cookie.yields}}</td>
+            <td><a v-bind:href="cookie.recipe">Get the Recipe!</a></td>
           </tr>
         </tbody> 
       </table>
-
     </div> 
+
+   <div class="Big Cookie">
+    <img src="Big_Cookie1.png" alt="chocolate chip cookie" width="2000" height="2000"></div>
+  <style>
+    body {
+      background-image: url('pale_blue_background.jpg');
+      background-size: cover;
+    }
+  </style>
+  
   <script src="cookie.js"></script>
 </body>
 
