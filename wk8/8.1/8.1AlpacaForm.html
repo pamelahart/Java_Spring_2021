@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="AlpacaForm_main.css">
+    <title>The Alpaca Fan Club</title>
+</head>
+<body> <!-- Need 7 Div Tags -->
+    <div id="alpacaForm" v-cloak>
+        <form>
+            <fieldset>
+                <legend>Fan Club Registration</legend>
+
+                <div>
+                     <label for="First Name">First Name</label>
+                     <input id="firstName"
+                     v-model="firstName">
+                </div>
+
+                <div>
+                    <label for="Last Name">Last Name</label>
+                    <input id="lastName"
+                     v-model="lastName">
+                </div>
+
+                <div>
+                    <label for="Street Address">Street Address</label>
+                   <input id="street"
+                    v-model="street">
+                </div>
+
+                <div>
+                    <label>State</label>
+                        <select name="" id=""
+                            v-model="state">
+                            <option v-for="state in availableStates"
+                              v-bind:value="state.value">
+                                {{state.name}}
+                          </option>
+                         </select>
+                </div>
+
+                <div class="alpaca-color">
+                    <p>Favorite Alpaca Colors</p>
+                      <div>
+                        <ul>
+                            <li v-for="color in colors"><label
+                                v-bind:for="color.value">
+                                <input type= "checkbox" 
+                                name="" 
+                                v-model="selectedColor"
+                                v-bind:value="color.value">
+                                {{color.name}}
+                                 </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="alpaca-status">
+                    <label>Alpaca Status</label>
+                    <textarea name="" id=""
+                    cols="30" rows="10"
+                    v-model="status"></textarea>
+                </div>
+           
+            </fieldset>
+
+        <div class="output"> <!-- Output to view in console setting -->
+            <strong>Output</strong><br>
+            First name: {{firstName}}<br>
+            Last Name: {{lastName}}<br>
+            Street: {{street}}<br>
+            State: {{state}}<br>
+            Color: {{selectedColor}}<br>
+            Status: {{status}}<br>
+        </div>
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="AlpacaForm.js"></script>
+</body>
+</html>
