@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Order Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Roboto&display=swap" rel="stylesheet">
+    <link href="cookieform.css" rel="stylesheet" />
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+</head>
+
+<body>
+    
+    <H1>Cookie Order Form</H1>
+   
+    <div id="myCookieApp"> <!-- this is the el in the java script file- must match exactly -->
+      <table>
+        <thead>
+          <th>Cookie</th>
+          <th>Name</th>
+          <th>Time</th>
+          <th>Yields</th>
+          <th>Recipe</th>
+        </thead> 
+        <tbody>
+            <tr v-for="(cookie, idx) in cookies"
+            v-bind:class="{even: idx % 2 ===0}">
+            <td><img v-bind:src="cookie.image" v-bind:alt="cookie.name + '' + cookie.name" /></td>
+            <td>{{cookie.name}}</td>
+            <td>{{cookie.time}}</td>
+            <td>{{cookie.yields}}</td>
+            <td><a v-bind:href="cookie.recipe">Get the Recipe!</a></td>
+            <td>{{cell actions}}</td>
+            <button>type="button" v-on:click="deleteItem(console)">Delete</button>
+                        <!-- No Idea if this is correct position or syntax becaue Im using a table & example did not..... -->
+          </div>
+          
+          </tr>
+        </tbody> 
+      </table>
+    </div> 
+
+    <div>
+      <form v-on:submit.prevent="submitHandler">
+        <fieldset>
+          <legend>Add a console to the collection</legend>
+        <div>
+          <label for="image">Cookie</label>
+          <input id="image" type="text" 
+          v-model="newConsoleObj.image">
+        </div>
+        
+          <div>
+            <label for="name">Name</label>
+            <input id="name" type="text"
+            v-model="newConsoleObj.name">
+          </div>
+
+          <div>
+            <label for="time">Time</label>
+            <input id="time" type="text" 
+            v-model="newConsoleObj.time">
+          </div>
+           
+          <div>
+            <label for="yields">Yields</label>
+            <input id="yields" type="text" 
+            v-model="newConsoleObj.yields">
+          </div>
+
+          <div>
+            <label for="recipe">Recipe</label>
+            <input id="recipe" type="recipe" 
+            v-model="newConsoleObj.recipe">
+          </div>
+
+          <button id="submit">SUBMIT</button>
+        </fieldset>
+      </form>
+    </div>
+  
+  <script src="cookieform.js"></script>
+</body>
+
+</html>
+

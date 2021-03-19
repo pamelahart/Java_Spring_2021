@@ -1,0 +1,65 @@
+h1 {
+   /*  line-height: 100%; */
+    color: #040474;
+    font-family: 'Akaya Kanadaka', cursive;
+    text-align: center;
+    font-size: 100px;
+    padding-top: 1em;
+    padding-left: 0em;
+   
+}
+.even { /*  I tried changing this to even and same result happened- why? */
+    background:#eee;
+} 
+.odd {
+    background:#779cdb
+}
+.cookie {
+    max-height: 50%;
+}
+form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 30px;
+    color:  #040474;
+    border: 7px solid #040474;
+}
+table {
+    width: 100%;
+    max-width: 600px;
+    margin:0 auto;
+    border: 7px solid #040474;
+    padding: auto;
+}
+tr {
+    color: #040474;
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    padding-left: 10em;
+    padding-right: 10em;
+
+}
+td {
+    color: #040474;
+    font-family: 'Roboto, bold', sans-serif;
+    text-align: center;
+    font-size: 30px;
+    padding-right: 0em;
+
+}
+    body {
+      background-image: url('pale_blue_background.jpg');
+      background-size: cover;
+
+}
+button {
+    color: #ffffff;
+    background-color: #040474;
+    font: 'Roboto';
+    
+}
+      /* }
+Big Cookie {
+    position: absolute; 
+    left: 15px;  */
